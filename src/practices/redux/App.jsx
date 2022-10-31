@@ -3,6 +3,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import { StoreContext } from "./utils/context";
 import store from "./store";
+import { Provider } from "react-redux";
 
 export default class App extends PureComponent {
   constructor(props) {
@@ -11,10 +12,12 @@ export default class App extends PureComponent {
 
   render() {
     return (
-      <StoreContext.Provider value={store}>
+      // <StoreContext.Provider value={store}>
+      <Provider store={store} >
         <Home />
         <About />
-      </StoreContext.Provider>
+      </Provider>
+      // </StoreContext.Provider>
     );
   }
 }

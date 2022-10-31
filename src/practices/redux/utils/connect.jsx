@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { StoreContext } from "./context";
 
-export default function connect(mapStateToProps, mapDispatchToProps) {
+export function connect(mapStateToProps, mapDispatchToProps) {
   return function enhanceHOC(WrappedComponent) {
     class EnhanceComponent extends PureComponent {
       constructor(props, context) {

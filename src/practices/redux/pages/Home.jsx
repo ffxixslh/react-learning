@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import { decAction, subAction } from "../store/actionsCreators";
-import connect from "../utils/connect";
+// import { connect } from "../utils/connect";
+import { connect } from "react-redux";
 
 class Home extends PureComponent {
   render() {

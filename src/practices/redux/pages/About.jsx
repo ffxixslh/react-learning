@@ -1,6 +1,7 @@
 import React from "react";
 import { addAction, incAction } from "../store/actionsCreators";
-import connect from "../utils/connect";
+// import { connect } from "../utils/connect";
+import { connect } from 'react-redux'
 
 function About(props) {
   const { counter, incNum, addNum } = props;
