@@ -17,9 +17,15 @@ import ReactDOM from "react-dom/client";
 // import App from './practices/todos/App'
 // import App from './practices/pink-dot/App'
 // import App from './practices/planet-places/App'
-import App from './practices/netease-music/App'
+// import App from './practices/netease-music/App'
 // import App from './practices/counter-redux/Counter'
-// import "./index.css";
+// import App from './practices/axios/axios-react'
+// import App from "./practices/TransitionDemos/App";
+import App from "./practices/redux/App";
+
+import "./index.css";
+
+// import "antd/dist/antd.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
