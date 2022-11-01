@@ -1,7 +1,9 @@
-import { ADD_NUM, SUB_NUM, INC_NUM, DEC_NUM } from "./constants";
+import { ADD_NUM, SUB_NUM, INC_NUM, DEC_NUM, CHANGE_BANNERS, CHANGE_RECOMMENDS } from "./constants";
 
 const initialState = {
   counter: 5,
+  recommends: [],
+  banners: [],
 };
 
 export const reducer = (state = initialState, action) => {
@@ -29,6 +31,18 @@ export const reducer = (state = initialState, action) => {
         ...state,
         counter: state.counter - 1,
       };
+    }
+    case CHANGE_BANNERS: {
+      return {
+        ...state,
+        banners: action.payload.banners
+      }
+    }
+    case CHANGE_RECOMMENDS: {
+      return {
+        ...state, 
+        recommends: action.payload.recommends
+      }
     }
     default: {
       return state;

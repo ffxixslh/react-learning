@@ -13,6 +13,7 @@ specifiers:
   react-redux: ^8.0.4
   react-transition-group: ^4.4.5
   redux: ^4.2.0
+  redux-thunk: ^2.4.1
   styled-components: ^5.3.6
   vite: ^3.0.7
 
@@ -26,6 +27,7 @@ dependencies:
   react-redux: registry.npmmirror.com/react-redux/8.0.4_yjtsim5uvgjttslbpqb5so5y3m
   react-transition-group: 4.4.5_biqbaboplfbrettd7655fr4n2y
   redux: 4.2.0
+  redux-thunk: registry.npmmirror.com/redux-thunk/2.4.1_redux@4.2.0
   styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
 
 devDependencies:
@@ -380,7 +382,7 @@ packages:
       react: 18.2.0
       react-redux: registry.npmmirror.com/react-redux/8.0.4_yjtsim5uvgjttslbpqb5so5y3m
       redux: 4.2.0
-      redux-thunk: 2.4.1_redux@4.2.0
+      redux-thunk: registry.npmmirror.com/redux-thunk/2.4.1_redux@4.2.0
       reselect: 4.1.6
     dev: false
 
@@ -793,14 +795,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
-
-  /redux-thunk/2.4.1_redux@4.2.0:
-    resolution: {integrity: sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q==}
-    peerDependencies:
-      redux: ^4
-    dependencies:
-      redux: 4.2.0
     dev: false
 
   /redux/4.2.0:
@@ -2116,6 +2110,17 @@ packages:
       react-is: registry.npmmirror.com/react-is/18.2.0
       redux: 4.2.0
       use-sync-external-store: registry.npmmirror.com/use-sync-external-store/1.2.0_react@18.2.0
+    dev: false
+
+  registry.npmmirror.com/redux-thunk/2.4.1_redux@4.2.0:
+    resolution: {integrity: sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/redux-thunk/-/redux-thunk-2.4.1.tgz}
+    id: registry.npmmirror.com/redux-thunk/2.4.1
+    name: redux-thunk
+    version: 2.4.1
+    peerDependencies:
+      redux: ^4
+    dependencies:
+      redux: 4.2.0
     dev: false
 
   registry.npmmirror.com/regenerator-runtime/0.13.10:
