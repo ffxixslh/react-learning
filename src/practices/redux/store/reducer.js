@@ -1,4 +1,4 @@
-import { ADD_NUM, SUB_NUM, INC_NUM, DEC_NUM, CHANGE_BANNERS, CHANGE_RECOMMENDS } from "./constants";
+import { ADD_NUM, SUB_NUM, INC_NUM, DEC_NUM, CHANGE_BANNERS, CHANGE_RECOMMENDS } from "./constants.js";
 
 const initialState = {
   counter: 5,

@@ -5,10 +5,10 @@ import { connect } from "react-redux";
 import { useEffect } from "react";
 
 function About(props) {
-  const { banners, recommends, getMultiData } = props;
+  const { banners, recommends, getAboutMultiData } = props;
 
   useEffect(() => {
-    getMultiData();
+    getAboutMultiData();
   }, []);
 
   return (
@@ -39,7 +39,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getMultiData() {
+    getAboutMultiData() {
       dispatch(getMultiDataAction);
     },
   };

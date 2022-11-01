@@ -6,7 +6,8 @@ import {
   DEC_NUM,
   CHANGE_BANNERS,
   CHANGE_RECOMMENDS,
-} from "./constants";
+  FETCH_MULTIDATA,
+} from "./constants.js";
 
 const addAction = (num) => {
   return {
@@ -56,12 +57,18 @@ const changeRecommendAction = (recommends) => {
   };
 };
 
+// redux-thunk
 const getMultiDataAction = (dispatch) => {
   axios({ url: "http://123.207.32.32:8000/home/multidata" }).then((res) => {
     const data = res.data.data;
     dispatch(changeBannerAction(data.banner.list));
     dispatch(changeRecommendAction(data.recommend.list));
   });
+};
+
+// redux-saga
+const fetchMultiDataAction = {
+  type: FETCH_MULTIDATA,
 };
 
 export {
@@ -72,4 +79,5 @@ export {
   changeBannerAction,
   changeRecommendAction,
   getMultiDataAction,
+  fetchMultiDataAction,
 };
