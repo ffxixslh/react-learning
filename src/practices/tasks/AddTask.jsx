@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useTasksDispatch } from './TasksContext.jsx';
+import React, { useState } from 'react'
+import { useTasksDispatch } from './TasksContext.jsx'
 
-export default function AddTask() {
-  const [text, setText] = useState('');
-  const dispatch = useTasksDispatch();
+export default function AddTask () {
+  const [text, setText] = useState('')
+  const dispatch = useTasksDispatch()
   return (
     <>
       <input
@@ -12,15 +12,15 @@ export default function AddTask() {
         onChange={e => setText(e.target.value)}
       />
       <button onClick={() => {
-        setText('');
+        setText('')
         dispatch({
           type: 'added',
           id: nextId++,
-          text: text,
-        }); 
+          text
+        })
       }}>Add</button>
     </>
-  );
+  )
 }
 
-let nextId = 3;
+let nextId = 3

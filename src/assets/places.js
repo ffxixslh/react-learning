@@ -2,7 +2,7 @@ export const initialTravelPlan = {
   0: {
     id: 0,
     title: '(Root)',
-    childIds: [1, 43, 47],
+    childIds: [1, 43, 47]
   },
   1: {
     id: 1,
@@ -12,8 +12,8 @@ export const initialTravelPlan = {
   2: {
     id: 2,
     title: 'Africa',
-    childIds: [3, 4, 5, 6 , 7, 8, 9]
-  }, 
+    childIds: [3, 4, 5, 6, 7, 8, 9]
+  },
   3: {
     id: 3,
     title: 'Botswana',
@@ -33,7 +33,7 @@ export const initialTravelPlan = {
     id: 6,
     title: 'Madagascar',
     childIds: []
-  }, 
+  },
   7: {
     id: 7,
     title: 'Morocco',
@@ -52,7 +52,7 @@ export const initialTravelPlan = {
   10: {
     id: 10,
     title: 'Americas',
-    childIds: [11, 12, 13, 14, 15, 16, 17, 18],   
+    childIds: [11, 12, 13, 14, 15, 16, 17, 18]
   },
   11: {
     id: 11,
@@ -68,7 +68,7 @@ export const initialTravelPlan = {
     id: 13,
     title: 'Barbados',
     childIds: []
-  }, 
+  },
   14: {
     id: 14,
     title: 'Canada',
@@ -97,7 +97,7 @@ export const initialTravelPlan = {
   19: {
     id: 19,
     title: 'Asia',
-    childIds: [20, 21, 22, 23, 24, 25, 26],   
+    childIds: [20, 21, 22, 23, 24, 25, 26]
   },
   20: {
     id: 20,
@@ -137,7 +137,7 @@ export const initialTravelPlan = {
   27: {
     id: 27,
     title: 'Europe',
-    childIds: [28, 29, 30, 31, 32, 33, 34],   
+    childIds: [28, 29, 30, 31, 32, 33, 34]
   },
   28: {
     id: 28,
@@ -177,7 +177,7 @@ export const initialTravelPlan = {
   35: {
     id: 35,
     title: 'Oceania',
-    childIds: [36, 37, 38, 39, 40, 41, 42],   
+    childIds: [36, 37, 38, 39, 40, 41, 42]
   },
   36: {
     id: 36,
@@ -249,4 +249,4 @@ export const initialTravelPlan = {
     title: 'Green Hill',
     childIds: []
   }
-};
+}

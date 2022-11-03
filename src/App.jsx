@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { initialTravelPlan } from "./assets/places";
-import "./App.css";
+import React, { useState } from 'react'
+import { initialTravelPlan } from './assets/places'
+import './App.css'
 
-function PlaceTree({ id, parentId, placesId, onComplete }) {
-  const place = placesId[id];
-  const childIds = place.childIds;
+function PlaceTree ({ id, parentId, placesId, onComplete }) {
+  const place = placesId[id]
+  const childIds = place.childIds
 
   return (
     <>
@@ -26,23 +26,23 @@ function PlaceTree({ id, parentId, placesId, onComplete }) {
         </ol>
       )}
     </>
-  );
+  )
 }
 
-function TravelPlan() {
-  const [plan, setPlan] = useState(initialTravelPlan);
-  const root = plan[0];
-  const planetIds = root.childIds;
+function TravelPlan () {
+  const [plan, setPlan] = useState(initialTravelPlan)
+  const root = plan[0]
+  const planetIds = root.childIds
 
   const handleComplete = (parentId, childId) => {
-    const parent = plan[parentId];
+    const parent = plan[parentId]
     const nextParent = {
       ...parent,
-      childIds: parent.childIds.filter((id) => id !== childId),
-    };
+      childIds: parent.childIds.filter((id) => id !== childId)
+    }
 
-    setPlan({ ...plan, [parentId]: nextParent });
-  };
+    setPlan({ ...plan, [parentId]: nextParent })
+  }
 
   return (
     <>
@@ -59,9 +59,9 @@ function TravelPlan() {
         ))}
       </ol>
     </>
-  );
+  )
 }
 
-export default function App() {
-  return <TravelPlan />;
+export default function App () {
+  return <TravelPlan />
 }

@@ -1,16 +1,16 @@
-export function fetchData(url) {
+export function fetchData (url) {
   if (url === '/planets') {
-    return fetchPlanets();
+    return fetchPlanets()
   } else if (url.startsWith('/planets/')) {
-    const match = url.match(/^\/planets\/([\w-]+)\/places(\/)?$/);
+    const match = url.match(/^\/planets\/([\w-]+)\/places(\/)?$/)
     if (!match || !match[1] || !match[1].length) {
-      throw Error('Expected URL like "/planets/earth/places". Received: "' + url + '".');
+      throw Error('Expected URL like "/planets/earth/places". Received: "' + url + '".')
     }
-    return fetchPlaces(match[1]);
-  } else throw Error('Expected URL like "/planets" or "/planets/earth/places". Received: "' + url + '".');
+    return fetchPlaces(match[1])
+  } else throw Error('Expected URL like "/planets" or "/planets/earth/places". Received: "' + url + '".')
 }
 
-async function fetchPlanets() {
+async function fetchPlanets () {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve([{
@@ -21,18 +21,18 @@ async function fetchPlanets() {
         name: 'Venus'
       }, {
         id: 'mars',
-        name: 'Mars'        
-      }]);
-    }, 1000);
-  });
+        name: 'Mars'
+      }])
+    }, 1000)
+  })
 }
 
-async function fetchPlaces(planetId) {
+async function fetchPlaces (planetId) {
   if (typeof planetId !== 'string') {
     throw Error(
       'fetchPlaces(planetId) expects a string argument. ' +
       'Instead received: ' + planetId + '.'
-    );
+    )
   }
   return new Promise(resolve => {
     setTimeout(() => {
@@ -45,8 +45,8 @@ async function fetchPlaces(planetId) {
           name: 'Spain'
         }, {
           id: 'vietnam',
-          name: 'Vietnam'        
-        }]);
+          name: 'Vietnam'
+        }])
       } else if (planetId === 'venus') {
         resolve([{
           id: 'aurelia',
@@ -56,8 +56,8 @@ async function fetchPlaces(planetId) {
           name: 'Diana Chasma'
         }, {
           id: 'kumsong-vallis',
-          name: 'Kŭmsŏng Vallis'        
-        }]);
+          name: 'Kŭmsŏng Vallis'
+        }])
       } else if (planetId === 'mars') {
         resolve([{
           id: 'aluminum-city',
@@ -68,8 +68,8 @@ async function fetchPlaces(planetId) {
         }, {
           id: 'vishniac',
           name: 'Vishniac'
-        }]);
-      } else throw Error('Uknown planet ID: ' + planetId);
-    }, 1000);
-  });
+        }])
+      } else throw Error('Uknown planet ID: ' + planetId)
+    }, 1000)
+  })
 }

@@ -1,33 +1,33 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 const LoginPage = () => {
-  return <h2>Login</h2>;
-};
+  return <h2>Login</h2>
+}
 
 const withRenderTime = (WrappedComponent) => {
   return class extends Component {
-    UNSAFE_componentWillMount() {
-      this.startTime = Date.now();
+    UNSAFE_componentWillMount () {
+      this.startTime = Date.now()
     }
 
-    componentDidMount() {
-      this.endTime = Date.now();
-      const delta = this.endTime - this.startTime;
-      console.log(`page: ${WrappedComponent.name} time:${delta}`);
+    componentDidMount () {
+      this.endTime = Date.now()
+      const delta = this.endTime - this.startTime
+      console.log(`page: ${WrappedComponent.name} time:${delta}`)
     }
 
-    render() {
-      return <WrappedComponent {...this.props} />;
+    render () {
+      return <WrappedComponent {...this.props} />
     }
-  };
-};
+  }
+}
 
-const LoginTime = withRenderTime(LoginPage);
+const LoginTime = withRenderTime(LoginPage)
 
-export default function Time() {
+export default function Time () {
   return (
     <>
       <LoginTime />
     </>
-  );
+  )
 }

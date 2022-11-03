@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 // import App from "./App";
 // import HOC from "./pages/HOC-1";
 // import LSU from './pages/lift-state-up'
@@ -21,14 +21,14 @@ import ReactDOM from "react-dom/client";
 // import App from './practices/counter-redux/Counter'
 // import App from './practices/axios/axios-react'
 // import App from "./practices/TransitionDemos/App";
-import App from "./practices/redux/App";
+import App from './practices/redux/App'
 
-import "./index.css";
+import './index.css'
 
 // import "antd/dist/antd.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+)

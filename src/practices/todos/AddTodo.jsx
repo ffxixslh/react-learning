@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { useTodoDispatch } from "./todoContext";
+import React, { useState } from 'react'
+import { useTodoDispatch } from './todoContext'
 
 const AddTodo = () => {
-  const [content, setContent] = useState("");
-  const dispatch = useTodoDispatch();
-  console.log("AddTodo render");
+  const [content, setContent] = useState('')
+  const dispatch = useTodoDispatch()
+  console.log('AddTodo render')
 
   return (
     <>
@@ -17,19 +17,19 @@ const AddTodo = () => {
       <button
         onClick={() => {
           dispatch({
-            type: "added",
+            type: 'added',
             id: nextId++,
-            text: content,
-          });
-          setContent("");
+            text: content
+          })
+          setContent('')
         }}
       >
         Add
       </button>
     </>
-  );
-};
+  )
+}
 
-export default AddTodo;
+export default AddTodo
 
-let nextId = 3;
+let nextId = 3

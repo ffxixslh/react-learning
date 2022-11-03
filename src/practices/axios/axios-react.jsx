@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react'
 import instance from './request'
 
-function AxiosReact() {
+function AxiosReact () {
   instance({
-    url: "/get",
+    url: '/get',
     params: {
-      name: "vv",
-      age: 22,
-    },
+      name: 'vv',
+      age: 22
+    }
   })
     .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-  return <div>AxiosReact</div>;
+    .catch((err) => console.log(err))
+  return <div>AxiosReact</div>
 }
 
-export default AxiosReact;
+export default AxiosReact

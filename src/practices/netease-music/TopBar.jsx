@@ -1,6 +1,6 @@
-import React from "react";
-import Logo from "../../assets/react.svg";
-import styled from "styled-components";
+import React from 'react'
+import Logo from '../../assets/react.svg'
+import styled from 'styled-components'
 
 const Input = styled.input`
   color: pink;
@@ -8,7 +8,7 @@ const Input = styled.input`
   &::-webkit-input-placeholder {
     color: lightgray;
   }
-`;
+`
 
 const TopBar = () => {
   return (
@@ -16,7 +16,7 @@ const TopBar = () => {
       <img src={Logo} alt="logo" />
       <Input placeholder="Type here..." />
     </>
-  );
-};
+  )
+}
 
-export default TopBar;
+export default TopBar

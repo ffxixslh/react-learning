@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 // import ReactTransition from './Transition'
 // import ReactSwitchTransition from './SwitchTransition'
 import ReactTransitionGroup from './TransitionGroup'
@@ -11,7 +11,7 @@ const App = () => {
       {/* <ReactSwitchTransition /> */}
       <ReactTransitionGroup />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -1,6 +1,6 @@
-import React from "react";
-import LeftMenu from "./LeftMenu";
-import RightContent from "./RightContent";
+import React from 'react'
+import LeftMenu from './LeftMenu'
+import RightContent from './RightContent'
 
 const MainContainer = () => {
   return (
@@ -8,7 +8,7 @@ const MainContainer = () => {
       <LeftMenu />
       <RightContent />
     </>
-  );
-};
+  )
+}
 
-export default MainContainer;
+export default MainContainer

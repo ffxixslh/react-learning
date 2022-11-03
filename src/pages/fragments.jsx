@@ -1,6 +1,6 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from 'react'
 
-function Table() {
+function Table () {
   return (
     <table>
       <tbody>
@@ -9,16 +9,16 @@ function Table() {
         </tr>
       </tbody>
     </table>
-  );
+  )
 }
 
-function Columns() {
+function Columns () {
   return (
     <Fragment>
       <td>Hello</td>
       <td>World</td>
     </Fragment>
-  );
+  )
 }
 
-export default Table;
+export default Table

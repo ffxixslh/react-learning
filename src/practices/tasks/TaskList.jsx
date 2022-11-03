@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useTasks, useTasksDispatch } from './TasksContext.jsx';
+import React, { useState } from 'react'
+import { useTasks, useTasksDispatch } from './TasksContext.jsx'
 
-export default function TaskList() {
-  const tasks = useTasks();
+export default function TaskList () {
+  const tasks = useTasks()
   return (
     <ul>
       {tasks.map(task => (
@@ -11,13 +11,13 @@ export default function TaskList() {
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
-function Task({ task }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const dispatch = useTasksDispatch();
-  let taskContent;
+function Task ({ task }) {
+  const [isEditing, setIsEditing] = useState(false)
+  const dispatch = useTasksDispatch()
+  let taskContent
   if (isEditing) {
     taskContent = (
       <>
@@ -30,13 +30,13 @@ function Task({ task }) {
                 ...task,
                 text: e.target.value
               }
-            });
+            })
           }} />
         <button onClick={() => setIsEditing(false)}>
           Save
         </button>
       </>
-    );
+    )
   } else {
     taskContent = (
       <>
@@ -45,7 +45,7 @@ function Task({ task }) {
           Edit
         </button>
       </>
-    );
+    )
   }
   return (
     <label>
@@ -59,7 +59,7 @@ function Task({ task }) {
               ...task,
               done: e.target.checked
             }
-          });
+          })
         }}
       />
       {taskContent}
@@ -67,10 +67,10 @@ function Task({ task }) {
         dispatch({
           type: 'deleted',
           id: task.id
-        });
+        })
       }}>
         Delete
       </button>
     </label>
-  );
+  )
 }

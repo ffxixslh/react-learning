@@ -1,14 +1,14 @@
 
-import { useContext } from "react";
-import { LevelContext } from "./LevelContext";
+import React, { useContext } from 'react'
+import { LevelContext } from './LevelContext'
 
-export default function Section({ children }) {
-  const level = useContext(LevelContext);
+export default function Section ({ children }) {
+  const level = useContext(LevelContext)
   return (
     <section>
-      <LevelContext.Provider value={level + 1}> 
+      <LevelContext.Provider value={level + 1}>
         {children}
       </LevelContext.Provider>
     </section>
-  );
+  )
 }

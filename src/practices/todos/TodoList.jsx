@@ -1,10 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import { useTodo, useTodoDispatch } from "./todoContext";
+import React, { useState } from 'react'
+
+import { useTodo, useTodoDispatch } from './todoContext'
 
 const TodoList = () => {
-  const todos = useTodo();
-  console.log("TodoList render");
+  const todos = useTodo()
+  console.log('TodoList render')
   return (
     <ul>
       {todos.map((todo) => (
@@ -13,14 +13,14 @@ const TodoList = () => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
 const Todo = ({ todo }) => {
-  const [isEditing, setIsEditing] = useState(false);
-  const dispatch = useTodoDispatch();
-  const deleteStyle = { textDecorationLine: "line-through" };
-  console.log("Todo render");
+  const [isEditing, setIsEditing] = useState(false)
+  const dispatch = useTodoDispatch()
+  const deleteStyle = { textDecorationLine: 'line-through' }
+  console.log('Todo render')
 
   return (
     <div>
@@ -29,39 +29,41 @@ const Todo = ({ todo }) => {
         checked={todo.done}
         onChange={(e) =>
           dispatch({
-            type: "changed",
+            type: 'changed',
             todo: {
               ...todo,
-              done: e.target.checked,
-            },
+              done: e.target.checked
+            }
           })
         }
       />
-      {isEditing ? (
+      {isEditing
+        ? (
         <input
           type="text"
           value={todo.text}
           onChange={(e) => {
             dispatch({
-              type: "changed",
+              type: 'changed',
               todo: {
                 ...todo,
-                text: e.target.value,
-              },
-            });
+                text: e.target.value
+              }
+            })
           }}
         />
-      ) : (
+          )
+        : (
         <span style={todo.done ? deleteStyle : null}>{todo.text}</span>
-      )}
+          )}
       <button onClick={() => setIsEditing(!isEditing)}>
-        {isEditing ? "Save" : "Edit"}
+        {isEditing ? 'Save' : 'Edit'}
       </button>
-      <button onClick={() => dispatch({ type: "deleted", id: todo.id })}>
+      <button onClick={() => dispatch({ type: 'deleted', id: todo.id })}>
         Delete
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default TodoList;
+export default TodoList

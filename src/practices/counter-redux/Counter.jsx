@@ -1,42 +1,42 @@
-import React from "react";
-import { configureStore } from "@reduxjs/toolkit";
+import React from 'react'
+import { configureStore } from '@reduxjs/toolkit'
 
 const initialValue = {
-  value: 0,
-};
+  value: 0
+}
 
 const reducer = (state = initialValue, action) => {
   switch (action.type) {
-    case "counter/increment": {
+    case 'counter/increment': {
       console.log('plus 1')
       return {
         ...state,
-        value: state.value + 1,
-      };
+        value: state.value + 1
+      }
     }
-    
-    case "counter/decrement": {
+
+    case 'counter/decrement': {
       console.log('minus 1')
       return {
         ...state,
-        value: state.value - 1,
-      };
+        value: state.value - 1
+      }
     }
 
     default:
-      return state;
+      return state
   }
-};
+}
 
-const selectValue = (state) => state.value;
-let count;
+const selectValue = (state) => state.value
+let count
 const render = () => {
-  count = selectValue(store.getState());
-};
+  count = selectValue(store.getState())
+}
 
-const store = configureStore({ reducer });
+const store = configureStore({ reducer })
 
-store.subscribe(render);
+store.subscribe(render)
 
 render()
 
@@ -44,14 +44,14 @@ const Counter = () => {
   return (
     <div>
       <p>{count}</p>
-      <button onClick={() => store.dispatch({ type: "counter/increment" })}>
+      <button onClick={() => store.dispatch({ type: 'counter/increment' })}>
         +
       </button>
-      <button onClick={() => store.dispatch({ type: "counter/decrement" })}>
+      <button onClick={() => store.dispatch({ type: 'counter/decrement' })}>
         -
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter

@@ -1,7 +1,8 @@
-import Heading from "./Heading";
-import Section from "./Section";
+import React from 'react'
+import Heading from './Heading'
+import Section from './Section'
 
-export default function Page() {
+export default function Page () {
   return (
     <Section>
       <Heading>Title</Heading>
@@ -21,5 +22,5 @@ export default function Page() {
         </Section>
       </Section>
     </Section>
-  );
+  )
 }
