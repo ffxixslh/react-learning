@@ -1,15 +1,14 @@
-import React from "react";
-import { getMultiDataAction } from "../store/actionsCreators";
+import React, { useEffect } from 'react'
+import { getMultiDataAction } from '../store/actionsCreators'
 // import { connect } from "../utils/connect";
-import { connect } from "react-redux";
-import { useEffect } from "react";
+import { connect } from 'react-redux'
 
-function About(props) {
-  const { banners, recommends, getAboutMultiData } = props;
+function About (props) {
+  const { banners, recommends, getAboutMultiData } = props
 
   useEffect(() => {
-    getAboutMultiData();
-  }, []);
+    getAboutMultiData()
+  }, [])
 
   return (
     <div>
@@ -27,22 +26,22 @@ function About(props) {
         ))}
       </ul>
     </div>
-  );
+  )
 }
 
 const mapStateToProps = (state) => {
   return {
     banners: state.banners,
-    recommends: state.recommends,
-  };
-};
+    recommends: state.recommends
+  }
+}
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getAboutMultiData() {
-      dispatch(getMultiDataAction);
-    },
-  };
-};
+    getAboutMultiData () {
+      dispatch(getMultiDataAction)
+    }
+  }
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(About);
+export default connect(mapStateToProps, mapDispatchToProps)(About)

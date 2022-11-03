@@ -1,13 +1,14 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react'
 // import { connect } from "../utils/connect";
-import { connect } from "react-redux";
-import { fetchMultiDataAction } from "../store/actionsCreators";
+import { connect } from 'react-redux'
+import { fetchMultiDataAction } from '../store/home/actionsCreators'
 
 class Home extends PureComponent {
-  componentDidMount() {
-    this.props.fetchMultiData();
+  componentDidMount () {
+    this.props.fetchMultiData()
   }
-  render() {
+
+  render () {
     return (
       <div>
         <h2>Saga Home</h2>
@@ -24,23 +25,23 @@ class Home extends PureComponent {
           ))}
         </ul>
       </div>
-    );
+    )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    banners: state.banners,
-    recommends: state.recommends,
-  };
-};
+    banners: state.homeInfo.banners,
+    recommends: state.homeInfo.recommends
+  }
+}
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchMultiData() {
-      dispatch(fetchMultiDataAction);
-    },
-  };
-};
+    fetchMultiData () {
+      dispatch(fetchMultiDataAction)
+    }
+  }
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

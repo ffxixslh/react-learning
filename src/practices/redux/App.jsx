@@ -1,20 +1,16 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react'
 // import Home from "./pages/Home";
-// import About from "./pages/About";
+import About from './pages/About'
 // import Home from "./pages/ThunkHome";
-import Home from "./pages/SagaHome";
-import About from "./pages/ThunkAbout";
+import Home from './pages/SagaHome'
+// import About from "./pages/ThunkAbout";
 
-import store from "./store/store";
+import store from './store/index'
 // import { StoreContext } from "./utils/context";
-import { Provider } from "react-redux";
+import { Provider } from 'react-redux'
 
 export default class App extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+  render () {
     return (
       // <StoreContext.Provider value={store}>
       <Provider store={store} >
@@ -22,6 +18,6 @@ export default class App extends PureComponent {
         <About />
       </Provider>
       // </StoreContext.Provider>
-    );
+    )
   }
 }
