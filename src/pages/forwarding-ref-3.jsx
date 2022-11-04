@@ -10,7 +10,7 @@ const MyInput = forwardRef((props, ref) => {
   return <input {...props} ref={realInputRef} />
 })
 
-MyInput.displayName = "MyInput"
+MyInput.displayName = 'MyInput'
 
 export default function Form () {
   const inputRef = useRef(null)

@@ -24,7 +24,7 @@ function logProps (WrappedComponent) {
   const Wrapped = forwardRef((props, ref) => {
     return <LogProps {...props} forwardedRef={ref} />
   })
-  Wrapped.displayName = "Wrapped"
+  Wrapped.displayName = 'Wrapped'
 
   return Wrapped
 }

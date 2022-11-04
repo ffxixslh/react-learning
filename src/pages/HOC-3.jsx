@@ -5,7 +5,7 @@ const LoginPage = () => {
 }
 
 const withRenderTime = (WrappedComponent) => {
-  return class extends Component {
+  return class EnhancedClassComponent extends Component {
     UNSAFE_componentWillMount () {
       this.startTime = Date.now()
     }

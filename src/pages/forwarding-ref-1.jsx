@@ -7,7 +7,7 @@ const FancyButton = forwardRef((props, ref) => {
     </button>
   )
 })
-FancyButton.displayName = "FancyButton"
+FancyButton.displayName = 'FancyButton'
 
 const ButtonRef = createRef(null)
 
