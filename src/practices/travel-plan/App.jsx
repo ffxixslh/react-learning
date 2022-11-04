@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { initialTravelPlan } from './assets/places'
+import { initialTravelPlan } from '../../assets/places'
 import './App.css'
 
 function PlaceTree ({ id, parentId, placesId, onComplete }) {
